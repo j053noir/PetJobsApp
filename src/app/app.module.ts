@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/home/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { MaterialModule } from './material/material.module';
+import { PetItemComponent } from './components/home/catalogs/pets/pet-item/pet-item.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MaterialModule } from './material/material.module';
     HeaderComponent,
     PetsComponent,
     FilterComponent,
+    PetItemComponent,
   ],
   imports: [
     BrowserModule,
