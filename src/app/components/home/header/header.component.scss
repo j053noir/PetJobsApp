@@ -1,0 +1,36 @@
+@import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/mixins/breakpoints';
+
+header {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.menu-alignment {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  margin-right: auto;
+  img {
+    height: 64px;
+  }
+}
+
+.nav-menu {
+  margin-left: auto;
+}
+
+::ng-deep.mat-menu-panel {
+  width: 200px;
+}
+
+::ng-deep.mat-menu-item {
+  font-size: 20px;
+  &.active {
+    color: map-get($colors, 'primary');
+  }
+}
