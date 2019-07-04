@@ -1,0 +1,124 @@
+@import './variables';
+@import './mixins/contrast';
+@import '../scss/mixins/breakpoints';
+
+$font-family: 'Raleway', Arial, Helvetica, sans-serif !important;
+$list-group-border: #ccc !default;
+$list-group-hover: #bbb !default;
+$list-group-active: #3f51b5 !default;
+
+$alert-bg-color: rgba(229, 236, 131, 0.3) !default;
+
+form,
+.form {
+  mat-form-field {
+    padding: 0 5px;
+    display: block;
+    font-family: $font-family;
+  }
+  mat-radio-button {
+    padding: 0 5px;
+    font-family: $font-family;
+  }
+  .error {
+    color: $error;
+    font-size: 75%;
+    font-weight: 400;
+    line-height: 1.125;
+  }
+}
+
+.ng-select {
+  padding-bottom: 0.25rem;
+  &.ng-invalid.ng-touched,
+  &.ng-invalid.ng-dirty {
+    .ng-select-container {
+      .ng-value-container .ng-placeholder {
+        color: $error;
+      }
+      &::after {
+        border-bottom: 1px solid $error;
+      }
+    }
+  }
+  .ng-select-container {
+    color: $black;
+  }
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  top: calc(100% - 0.25em);
+}
+
+.form-inline {
+  text-align: center;
+  display: block;
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+}
+
+.list-group {
+  border: 1px solid $list-group-border;
+  border-radius: 0.25rem;
+  padding-left: 0;
+  .list-group-item {
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem 1.25rem;
+    border-bottom: 1px solid $list-group-border;
+    font-size: 14px;
+    &.active {
+      background-color: $list-group-active;
+      @include color-yiq($list-group-active);
+    }
+    &:hover {
+      background-color: $list-group-hover;
+      @include color-yiq($list-group-hover);
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.alert {
+  background-color: $alert-bg-color;
+  @include color-yiq($alert-bg-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+
+@include media-up(lg) {
+  .form-inline {
+    display: flex;
+    text-align: left;
+    .col {
+      flex-basis: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      padding: 0 5px;
+      mat-form-field {
+        padding-top: 6px;
+      }
+      &.btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          margin: 10px;
+        }
+      }
+      .ng-select {
+        width: 100%;
+        min-width: 10rem;
+        padding: 0 5px;
+      }
+    }
+  }
+}

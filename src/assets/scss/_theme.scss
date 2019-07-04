@@ -1,0 +1,33 @@
+@import './variables';
+@import './mixins/contrast';
+
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value !important;
+    @include color-yiq($value);
+  }
+
+  .font-#{$color} {
+    color: $value !important;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  scrollbar-color: $scrollbar-color $scrollbar-bg-color;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: $scrollbar-bg-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $scrollbar-color;
+  }
+}

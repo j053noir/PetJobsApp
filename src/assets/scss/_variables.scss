@@ -1,0 +1,28 @@
+$colors: (
+  primary: #31e6af,
+  info: #702b16,
+  success: #2aa826,
+  warn: #e6ad31,
+  danger: #e63131,
+  light: #fff,
+  dark: #111,
+);
+
+$success: #199003 !default;
+$error: #f44336 !default;
+$white: #fff !default;
+$black: rgba(0, 0, 0, 0.54) !default;
+$highlight: #31e6af !default;
+
+$scrollbar-color: #bbb;
+$scrollbar-bg-color: #ddd;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1080px,
+  xl: 1440px,
+) !default;

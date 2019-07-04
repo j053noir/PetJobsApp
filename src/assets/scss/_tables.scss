@@ -1,0 +1,71 @@
+@import './variables';
+@import './mixins/breakpoints';
+
+$table-border-color: #ddd !default;
+
+.header-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-table {
+  .mat-header-cell > * {
+    margin: auto;
+  }
+  .mat-cell > * {
+    overflow: auto;
+    margin: auto;
+  }
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 32px !important;
+  overflow: hidden;
+}
+
+.centrify {
+  align-items: center;
+  display: flex;
+}
+
+@include media-down(md) {
+  .header-actions {
+    justify-content: left;
+  }
+
+  .mat-table {
+    border: 0;
+    vertical-align: middle;
+    .caption {
+      font-size: 1.25rem;
+    }
+    .mat-row {
+      border-bottom: 1px solid $table-border-color;
+      display: block;
+    }
+    .mat-cell {
+      border-bottom: 1px solid $table-border-color;
+      display: block;
+      font-size: 0.85rem;
+      text-align: right;
+      font-weight: bold;
+      height: 30px;
+      margin-bottom: 4%;
+      padding: 0 15px;
+      &::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: capitalize;
+        font-weight: normal;
+        font-size: 1rem;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:first-child {
+        margin-top: 4%;
+      }
+    }
+  }
+}

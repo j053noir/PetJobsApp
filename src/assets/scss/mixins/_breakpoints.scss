@@ -1,0 +1,48 @@
+// FUNCTIONS
+
+@function max($size, $breakpoints: $grid-breakpoints) {
+  $next: next($size, $breakpoints);
+  @return if($next, min($next, $breakpoints) - 0.02, null);
+}
+
+@function min($size, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $size);
+  @return if($min != 0, $min, null);
+}
+
+@function next(
+  $size,
+  $breakpoints: $grid-breakpoints,
+  $breakpoint-sizes: map-keys($breakpoints)
+) {
+  $next: index($breakpoint-sizes, $size);
+  @return if(
+    $next != null and $next < length($breakpoint-sizes),
+    nth($breakpoint-sizes, $next + 1),
+    null
+  );
+}
+
+// MIXINS
+
+@mixin media-down($size, $breakpoints: $grid-breakpoints) {
+  $max: max($size, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-up($size, $breakpoints: $grid-breakpoints) {
+  $min: min($size, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+$ng-select-highlight: #31e6af !default;
+@import '~@ng-select/ng-select/scss/material.theme.scss';
+@import './assets/scss/variables';
+@import './assets/scss/grid';
+@import './assets/scss/fonts';
+@import './assets/scss/forms';
+@import './assets/scss/tables';
+@import './assets/scss/theme';
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome.scss';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+  }
+}
