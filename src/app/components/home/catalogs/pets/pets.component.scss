@@ -1,8 +1,22 @@
-.d-align-spacely {
+@import '../../../../../assets/scss/variables';
+@import '../../../../../assets/scss/mixins/breakpoints';
+
+.catalog {
   display: flex;
-  justify-content: space-evenly;
+  flex: 1;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
 app-pet-item {
+  margin-right: 2rem;
   margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+@include media-up(lg) {
+  .catalog {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }
