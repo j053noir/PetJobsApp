@@ -6,13 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/auth/login/login.component';
+import { FilterComponent } from './components/home/catalogs/filter/filter.component';
+import { PetsComponent } from './components/home/catalogs/pets/pets.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { MaterialModule } from './material/material.module';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    LoginComponent,
+    HeaderComponent,
+    PetsComponent,
+    FilterComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -1,3 +1,4 @@
+import { PetsComponent } from './components/home/catalogs/pets/pets.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
@@ -5,7 +6,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', children: [{ path: '', component: HomeComponent }] },
+  {
+    path: '',
+    component: HomeComponent,
+    children: [{ path: '', component: PetsComponent }],
+  },
   { path: '*', redirectTo: 'login' },
 ];
 
