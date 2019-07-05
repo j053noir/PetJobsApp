@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-shop-item',
@@ -6,17 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop-item.component.scss'],
 })
 export class ShopItemComponent implements OnInit {
-  item = {
-    image: '../../../../../../assets/img/petjobs_logo_header.png',
-    name: 'Clinica Veterinaria Patitas',
-    category: 'Veterinario',
-    workHours: '24 horas',
-    isOpen: true,
-    rating: 4.6,
-    comments: 3,
-  };
+  @Input() item: any;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

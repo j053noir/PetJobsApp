@@ -1,14 +1,14 @@
 <div class="row align-center">
-  <div class="col-xs-6">
-    <img [src]="item.image" alt="" class="img-fluid bg-primary" />
+  <div class="col-xs-12 col-lg-6">
+    <img [src]="item.image" alt="" class="img-fluid bg-primary shadow" />
   </div>
-  <div class="col-xs-6">
+  <div class="col-xs-12 col-lg-6 description">
     <h3>{{ item.name }}</h3>
     <h4>{{ item.category }}</h4>
     <div class="working-hours">
       <p>Horario: {{ item.workHours }}</p>
       &nbsp;
-      <span [ngClass]="{ open: item.isOpen }">{{
+      <span [ngClass]="{ 'open': item.isOpen }">{{
         item.isOpen ? 'Abierto' : 'Cerrado'
       }}</span>
     </div>
