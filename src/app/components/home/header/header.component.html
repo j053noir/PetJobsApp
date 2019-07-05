@@ -7,7 +7,8 @@
       <mat-icon aria-hidden="false" aria-label="Menu">more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu" xPosition="before" class="navigation-menu">
-      <button mat-menu-item routerLink="/" routerLinkActive="active">
+      <button mat-menu-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+        true}">
         <i class="fa fa-hand-lizard-o"></i>&nbsp;<span>Mascotas</span>
       </button>
       <button mat-menu-item [disabled]="true">
@@ -16,7 +17,7 @@
       <button mat-menu-item routerLink="/products" routerLinkActive="active">
         <i class="fa fa-shopping-bag"></i>&nbsp;<span>Productos</span>
       </button>
-      <button mat-menu-item routerLink="/" routerLinkActive="active">
+      <button mat-menu-item routerLink="/services" routerLinkActive="active">
         <i class="fa fa-briefcase"></i>&nbsp;<span>Servicios</span>
       </button>
       <button mat-menu-item [disabled]="true">

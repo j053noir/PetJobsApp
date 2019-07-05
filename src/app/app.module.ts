@@ -15,6 +15,8 @@ import { MaterialModule } from './material/material.module';
 import { PetItemComponent } from './components/home/catalogs/pets/pet-item/pet-item.component';
 import { ShopComponent } from './components/home/catalogs/shop/shop.component';
 import { ShopItemComponent } from './components/home/catalogs/shop/shop-item/shop-item.component';
+import { ServicesComponent } from './components/home/catalogs/services/services.component';
+import { ServiceItemComponent } from './components/home/catalogs/services/service-item/service-item.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ShopItemComponent } from './components/home/catalogs/shop/shop-item/sho
     PetItemComponent,
     ShopComponent,
     ShopItemComponent,
+    ServicesComponent,
+    ServiceItemComponent,
   ],
   imports: [
     BrowserModule,

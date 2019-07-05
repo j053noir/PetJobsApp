@@ -1,3 +1,4 @@
+import { ServicesComponent } from './components/home/catalogs/services/services.component';
 import { PetsComponent } from './components/home/catalogs/pets/pets.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: 'products', component: ShopComponent },
+      { path: 'services', component: ServicesComponent },
       { path: '**', component: PetsComponent },
     ],
   },
@@ -22,4 +24,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
