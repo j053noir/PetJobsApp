@@ -48,22 +48,27 @@ export class PetsComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onSwipeRight(event: any) {
     if (window.innerWidth <= 1080 && this.currentPetIndex >= 0) {
       this.currentPetIndex = this.currentPetIndex - 1;
-      this.catalog.nativeElement.scrollLeft -= 370;
-      // TODO: move scroll relative to window.innerwidth
+      this.catalog.nativeElement.scrollTo({
+        left: this.catalog.nativeElement.scrollLeft - 380,
+        behavior: 'smooth',
+      });
     }
   }
 
   onSwipeLeft(event: any) {
     if (window.innerWidth <= 1080 && this.currentPetIndex < this.pets.length) {
       this.currentPetIndex = this.currentPetIndex + 1;
-      this.catalog.nativeElement.scrollLeft += 370;
+      this.catalog.nativeElement.scrollTo({
+        left: this.catalog.nativeElement.scrollLeft + 380,
+        behavior: 'smooth',
+      });
     }
   }
 }
