@@ -1,15 +1,15 @@
 <div class="row align-center">
   <div class="col-xs-12 col-lg-6">
-    <img [src]="item.image" alt="" class="img-fluid bg-primary shadow" />
+    <img [src]="item.image" alt="" class="img-fluid bg-primary shadow m-auto" />
   </div>
   <div class="col-xs-12 col-lg-6 description">
     <h3>{{ item.name }}</h3>
     <h4>{{ item.category }}</h4>
-    <div class="working-hours">
-      <p>Horario: {{ item.workHours }}</p>
+    <div class="price">
+      <p>Precio: ${{ item.cost }}</p>
       &nbsp;
-      <span [ngClass]="{ 'open': item.isOpen }">{{
-        item.isOpen ? 'Abierto' : 'Cerrado'
+      <span [ngClass]="{ 'active': item.isAble }">{{
+        item.isAble ? 'Disponible' : 'Agotado'
       }}</span>
     </div>
     <div class="action-buttons">

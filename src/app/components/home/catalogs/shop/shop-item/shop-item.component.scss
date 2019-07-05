@@ -20,12 +20,12 @@ h4 {
   color: #818181;
 }
 
-.working-hours {
+.price {
   display: inline-flex;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   color: #818181;
-  .open {
+  .active {
     color: map-get($colors, 'primary');
   }
 }
@@ -48,6 +48,9 @@ p {
     margin-left: 5px;
     &:first-child {
       margin-left: 0;
+    }
+    &.stars {
+      color: map-get($colors, 'primary');
     }
   }
 }
