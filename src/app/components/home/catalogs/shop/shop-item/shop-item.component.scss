@@ -1,0 +1,31 @@
+@import '../../../../../../assets/scss/variables';
+@import '../../../../../../assets/scss/mixins/breakpoints';
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  font-family: montserrat, serif;
+  margin: 0;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: montserrat, serif;
+  margin: 0;
+  font-size: 16px;
+}
+
+.working-hours {
+  display: inline-flex;
+  color: #777777;
+  .active {
+    color: map-get($colors, 'primary');
+  }
+}
+
+p {
+  margin: 0;
+}

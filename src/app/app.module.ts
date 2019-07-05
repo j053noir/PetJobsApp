@@ -13,6 +13,8 @@ import { HomeComponent } from './components/home/home.component';
 
 import { MaterialModule } from './material/material.module';
 import { PetItemComponent } from './components/home/catalogs/pets/pet-item/pet-item.component';
+import { ShopComponent } from './components/home/catalogs/shop/shop.component';
+import { ShopItemComponent } from './components/home/catalogs/shop/shop-item/shop-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { PetItemComponent } from './components/home/catalogs/pets/pet-item/pet-i
     PetsComponent,
     FilterComponent,
     PetItemComponent,
+    ShopComponent,
+    ShopItemComponent,
   ],
   imports: [
     BrowserModule,

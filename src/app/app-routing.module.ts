@@ -3,15 +3,19 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ShopComponent } from './components/home/catalogs/shop/shop.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: '',
     component: HomeComponent,
-    children: [{ path: '', component: PetsComponent }],
+    children: [
+      { path: 'products', component: ShopComponent },
+      { path: '**', component: PetsComponent },
+    ],
   },
-  { path: '*', redirectTo: 'login' },
+  { path: '**', redirectTo: 'login' },
 ];
 
 @NgModule({
