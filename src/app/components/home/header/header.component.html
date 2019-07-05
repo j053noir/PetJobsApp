@@ -1,25 +1,22 @@
 <header class="bg-dark">
   <div class="container menu-alignment">
     <div class="brand">
-      <img
-        src="../../../../assets/img/petjobs_logo_header.png"
-        alt="petjobs_logo"
-      />
+      <img src="../../../../assets/img/petjobs_logo_header.png" alt="petjobs_logo" />
     </div>
     <button mat-button type="menu ml-auto" [matMenuTriggerFor]="menu">
       <mat-icon aria-hidden="false" aria-label="Menu">more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu" xPosition="before" class="navigation-menu">
-      <button mat-menu-item routerlink="/" routerLinkActive="active">
+      <button mat-menu-item routerLink="/" routerLinkActive="active">
         <i class="fa fa-hand-lizard-o"></i>&nbsp;<span>Mascotas</span>
       </button>
       <button mat-menu-item [disabled]="true">
         <i class="fa fa-heart-o"></i>&nbsp;<span>Favoritos</span>
       </button>
-      <button mat-menu-item routerlink="/products" routerLinkActive="active">
+      <button mat-menu-item routerLink="/products" routerLinkActive="active">
         <i class="fa fa-shopping-bag"></i>&nbsp;<span>Productos</span>
       </button>
-      <button mat-menu-item routerlink="/" routerLinkActive="active">
+      <button mat-menu-item routerLink="/" routerLinkActive="active">
         <i class="fa fa-briefcase"></i>&nbsp;<span>Servicios</span>
       </button>
       <button mat-menu-item [disabled]="true">
