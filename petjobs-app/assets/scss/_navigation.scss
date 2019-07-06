@@ -1,0 +1,116 @@
+@import './variables';
+@import './mixins/contrast';
+@import './mixins/breakpoints';
+
+// Navigation tabs
+
+$nav-tab-border: #ccc !default;
+$nav-tab-active: #4679bd !default;
+$nav-tab-hover: #bbb !default;
+
+.nav-tabs {
+  padding: 0;
+  overflow: auto;
+  margin-bottom: 2rem;
+  z-index: 1;
+  .tabs {
+    list-style: none;
+    padding-left: 0;
+    display: inline-flex;
+    .tab-item {
+      text-align: center;
+      a {
+        border: 1px solid $nav-tab-border;
+        display: block;
+        padding: 1.25rem 0.25rem;
+        color: $nav-tab-active;
+        min-width: 100px;
+        min-height: 80px;
+        i {
+          display: block;
+        }
+      }
+      &.active {
+        a {
+          background-color: $nav-tab-active;
+          @include color-yiq($nav-tab-active);
+          border: 1px solid $nav-tab-active;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          margin-left: calc(50% - 10px);
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $nav-tab-active;
+        }
+      }
+      &:hover {
+        a {
+          background-color: $nav-tab-hover;
+          @include color-yiq($nav-tab-active);
+          border: 1px solid $nav-tab-hover;
+        }
+        &:after {
+          border-top: 10px solid $nav-tab-hover;
+        }
+      }
+    }
+  }
+}
+
+.dots-menu {
+  .dots {
+    &::after {
+      content: '\2807';
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@include media-up(lg) {
+  .nav-tabs {
+    margin-bottom: 0;
+    overflow: inherit;
+    .tabs {
+      margin-top: 0;
+      display: block;
+      .tab-item {
+        &.active {
+          a {
+            &:after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 0;
+              margin-top: -26px;
+              margin-left: calc(100% + 4px);
+
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid $nav-tab-active;
+            }
+          }
+          &:after {
+            content: none;
+          }
+        }
+        &:hover {
+          a {
+            &:after {
+              border-left: 10px solid $nav-tab-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-content {
+    z-index: 0;
+    padding-left: 0;
+    margin-left: -15px;
+  }
+}
