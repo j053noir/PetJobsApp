@@ -1,0 +1,11 @@
+<app-filter></app-filter>
+<div class="container">
+  <div
+    class="row catalog"
+    #catalog
+    (swipeleft)="onSwipeLeft($event)"
+    (swiperight)="onSwipeRight($event)"
+  >
+    <app-pet-item *ngFor="let pet of pets" [pet]="pet"></app-pet-item>
+  </div>
+</div>

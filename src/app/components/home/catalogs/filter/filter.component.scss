@@ -1,0 +1,38 @@
+@import '../../../../../assets/scss/variables';
+@import '../../../../../assets/scss/mixins/breakpoints';
+
+mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: map-get($colors, 'primary') !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: map-get($colors, 'primary') !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: map-get($colors, 'primary') !important;
+}
+
+::ng-deep.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: map-get($colors, 'primary') !important;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .mat-fab,
+  .mat-flat-button,
+  .mat-mini-fab,
+  .mat-raised-button {
+    color: #fff;
+    background-color: map-get($colors, 'info');
+  }
+}

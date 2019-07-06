@@ -1,0 +1,26 @@
+<div class="row align-center">
+  <div class="col-xs-12 col-lg-6">
+    <img [src]="item.image" alt="" class="img-fluid bg-primary shadow m-auto" />
+  </div>
+  <div class="col-xs-12 col-lg-6 description">
+    <h3>{{ item.name }}</h3>
+    <h4>{{ item.category }}</h4>
+    <div class="price">
+      <p>Precio: ${{ item.cost }}</p>
+      &nbsp;
+      <span [ngClass]="{ 'active': item.isAble }">{{
+        item.isAble ? 'Disponible' : 'Agotado'
+      }}</span>
+    </div>
+    <div class="action-buttons">
+      <p class="stars">
+        <i class="fa fa-star"></i>&nbsp;
+        <span>{{ item.rating }}</span>
+      </p>
+      <p class="comments">
+        <i class="fa fa-comments-o"></i>&nbsp;
+        <span>{{ item.comments }}</span>
+      </p>
+    </div>
+  </div>
+</div>
